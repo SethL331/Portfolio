@@ -1,0 +1,145 @@
+html body {
+    background-color: #f5f5f5;
+    font-family: fira sans, sans-serif;
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0px;
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    font-size: 40px;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: black;
+    color: white;
+}
+
+.header {
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 640px;
+    font-size: 100px;
+    font-weight: 1000;
+    margin: 0 0 405px;
+}
+
+.resume {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    font-size: 25px;
+    margin: 0 20px 20px 0;
+    margin-top: 20px;
+}
+
+.resume img {
+    width: 800px;
+}
+
+.resbutton {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.resbutton button a {
+    text-decoration: none;
+    color: white;
+}
+
+.resbutton button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.end {
+    font-size: 25px;
+}
+
+.end a {
+    text-decoration: none;
+}
+
+.signature {
+    font-family: 'yesteryear', cursive;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes fade-up-in {
+  from {
+    opacity: 0;
+    transform: translateY(5rem) scale(0.96);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      animation: fade-up-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+      will-change: opacity, transform, filter;
+    }
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in--stagger {
+      animation: fade-up-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 50%;
+      animation-delay: var(--delay, 0ms);
+      will-change: opacity, transform, filter;
+    }
+  }
+}
